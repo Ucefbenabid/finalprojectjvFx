@@ -1,0 +1,129 @@
+.root {
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+    -fx-font-size: 14px;
+    -fx-background-color: #F3F4F6;
+}
+
+/* Base colors */
+* {
+    -primary: #147EFB;
+    -primary-light: #EBF5FF;
+    -success: #34C759;
+    -warning: #FF9500;
+    -error: #FF3B30;
+    -gray-100: #F3F4F6;
+    -gray-200: #E5E7EB;
+    -gray-300: #D1D5DB;
+    -gray-400: #9CA3AF;
+    -gray-500: #6B7280;
+    -gray-600: #4B5563;
+    -gray-700: #374151;
+    -gray-800: #1F2937;
+    -gray-900: #111827;
+}
+
+/* Button styles */
+.button {
+    -fx-background-radius: 5px;
+    -fx-padding: 8px 16px;
+    -fx-cursor: hand;
+    -fx-transition: all 0.2s;
+}
+
+.button-primary {
+    -fx-background-color: -primary;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.button-primary:hover {
+    -fx-background-color: derive(-primary, -10%);
+}
+
+.button-secondary {
+    -fx-background-color: white;
+    -fx-text-fill: -gray-700;
+    -fx-border-color: -gray-300;
+    -fx-border-radius: 5px;
+}
+
+.button-secondary:hover {
+    -fx-background-color: -gray-100;
+}
+
+.button-danger {
+    -fx-background-color: -error;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.button-danger:hover {
+    -fx-background-color: derive(-error, -10%);
+}
+
+/* Text field styles */
+.text-field, .password-field {
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-border-color: -gray-300;
+    -fx-padding: 8px;
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-border-color: -primary;
+    -fx-effect: dropshadow(gaussian, rgba(20, 126, 251, 0.2), 5, 0, 0, 0);
+}
+
+/* Table styles */
+.table-view {
+    -fx-background-color: white;
+    -fx-table-cell-border-color: transparent;
+    -fx-border-color: -gray-200;
+    -fx-border-radius: 5px;
+}
+
+.table-view .column-header {
+    -fx-background-color: -gray-100;
+}
+
+.table-view .column-header-background .label {
+    -fx-text-fill: -gray-800;
+    -fx-font-weight: bold;
+}
+
+.table-view .table-row-cell {
+    -fx-background-color: white;
+    -fx-border-color: transparent -gray-200 -gray-200 transparent;
+    -fx-border-width: 0 0 1 0;
+}
+
+.table-view .table-row-cell:odd {
+    -fx-background-color: -gray-100;
+}
+
+.table-view .table-row-cell:selected {
+    -fx-background-color: -primary-light;
+    -fx-text-fill: -gray-900;
+}
+
+/* Chart styles */
+.chart {
+    -fx-padding: 10px;
+}
+
+.chart-plot-background {
+    -fx-background-color: white;
+}
+
+.chart-vertical-grid-lines {
+    -fx-stroke: -gray-200;
+}
+
+.chart-horizontal-grid-lines {
+    -fx-stroke: -gray-200;
+}
+
+/* Bar chart specific styles */
+.default-color0.chart-bar {
+    -fx-bar-fill: -primary;
+}
